@@ -52,7 +52,10 @@
         <div class="header-main">
             <div class="container header-main-inner">
                 <a class="brand" href="{{ route('index') }}">
-                    <img src="{{ asset('img2/logo.png') }}" alt="{{ env('APP_NAME') }} logo">
+                    <span class="brand-mark" aria-hidden="true">
+                        <iconify-icon icon="solar:chart-square-bold-duotone"></iconify-icon>
+                    </span>
+                    <span class="brand-name">Brixcap</span>
                 </a>
 
                 <button type="button" class="navbar-toggle premium-toggle collapsed" data-toggle="collapse" data-target="#public-nav" aria-expanded="false" aria-controls="public-nav">
@@ -93,6 +96,7 @@
 
 <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/lib/iconify-icon.min.js') }}"></script>
 <script>
     (function () {
         var header = document.getElementById('site-header');

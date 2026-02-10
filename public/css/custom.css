@@ -203,10 +203,30 @@ h6 {
     align-items: center;
 }
 
-.brand img {
-    width: 185px;
-    max-width: 100%;
-    object-fit: contain;
+.brand-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #7ad4ff;
+    background: linear-gradient(160deg, rgba(11, 194, 210, 0.25), rgba(52, 126, 255, 0.2));
+    box-shadow: 0 0 18px rgba(11, 194, 210, 0.24), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.brand-mark iconify-icon {
+    font-size: 20px;
+}
+
+.brand-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #e5f7ff;
+    text-shadow: 0 0 16px rgba(11, 194, 210, 0.22);
 }
 
 .header-nav {
@@ -1044,8 +1064,18 @@ h6 {
         min-height: 72px;
     }
 
-    .brand img {
-        width: 150px;
+    .brand-mark {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+
+    .brand-mark iconify-icon {
+        font-size: 18px;
+    }
+
+    .brand-name {
+        font-size: 1.1rem;
     }
 
     .home-hero {
