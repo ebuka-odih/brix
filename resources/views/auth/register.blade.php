@@ -12,7 +12,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="{{ asset('img2/logo2.png') }}">
     <!-- Page Title  -->
-    <title>Register | {{ env('APP_NAME') }}</title>
+    <title>Register | BRIXCAP</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ asset('admin/assets/css/dashlite.css?ver=3.1.1') }}">
     <link id="skin-default" rel="stylesheet" href="{{ asset('admin/assets/css/theme.css?ver=3.1.1') }}">
@@ -28,8 +28,9 @@
                 <div class="nk-content ">
                     <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
                         <div class="brand-logo pb-4 text-center">
-                            <a href="{{ route('index') }}" class="logo-link">
-                                <img src="{{ asset('img2/logo2.png') }}" style="width:200px; height: 60px" alt="BRIXCAP"/>
+                            <a href="{{ route('index') }}" class="logo-link d-inline-flex align-items-center justify-content-center" style="gap: 10px;">
+                                <span style="width: 42px; height: 42px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #1264eb 0%, #0d53c5 100%); color: #fff; font-weight: 800; font-size: 20px;">B</span>
+                                <span style="font-size: 24px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #9fb9d8;">BRIXCAP</span>
                             </a>
                         </div>
                         <div class="card card-bordered">
@@ -115,7 +116,7 @@
                             <div class="row g-3">
                                 <div class="col-lg-6">
                                     <div class="nk-block-content text-center text-lg-start">
-                                        <p class="text-soft">&copy; {{ Date('Y') }} {{ env('APP_NAME') }}. All Rights Reserved.</p>
+                                        <p class="text-soft">&copy; {{ Date('Y') }} BRIXCAP. All Rights Reserved.</p>
                                     </div>
                                 </div>
                             </div>
