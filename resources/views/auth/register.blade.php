@@ -10,7 +10,7 @@
     <meta name="description" content="{{ env("APP_NAME")}} is a leading trading firm offering expert financial services, including forex, stocks, commodities, and crypto trading. Join us for market insights and profitable investment strategies."/>
 
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="{{ asset('img2/logo2.png') }}">
+    <link rel="shortcut icon" href="{{ asset('img2/icon-head.png') }}">
     <!-- Page Title  -->
     <title>Register | BRIXCAP</title>
     <!-- StyleSheets  -->
@@ -29,8 +29,10 @@
                     <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
                         <div class="brand-logo pb-4 text-center">
                             <a href="{{ route('index') }}" class="logo-link d-inline-flex align-items-center justify-content-center" style="gap: 10px;">
-                                <span style="width: 42px; height: 42px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #1264eb 0%, #0d53c5 100%); color: #fff; font-weight: 800; font-size: 20px;">B</span>
-                                <span style="font-size: 24px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #9fb9d8;">BRIXCAP</span>
+                                <span style="width: 40px; height: 40px; border-radius: 999px; padding: 4px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(159, 185, 216, 0.35); background: rgba(255, 255, 255, 0.04);">
+                                    <img src="{{ asset('img2/icon-head.png') }}" style="width: 100%; height: 100%; object-fit: contain;" alt="">
+                                </span>
+                                <span style="font-size: 22px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #9fb9d8;">BRIXCAP</span>
                             </a>
                         </div>
                         <div class="card card-bordered">

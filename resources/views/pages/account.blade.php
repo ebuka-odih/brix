@@ -8,7 +8,7 @@
 ])
 
 <section class="premium-section">
-    <div class="container content-grid">
+    <div class="container">
         <div class="glass-card reveal-up">
             <span class="section-label">Account Access</span>
             <h2 class="section-title">Choose the account setup that matches your strategy.</h2>
@@ -22,10 +22,6 @@
                 <li>Risk controls and account monitoring from one dashboard.</li>
                 <li>Scalable structure for long-term portfolio development.</li>
             </ul>
-        </div>
-
-        <div class="image-frame reveal-up delay-1">
-            <img src="{{ asset('img/wallet.png') }}" alt="Account wallet interface">
         </div>
     </div>
 </section>

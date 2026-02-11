@@ -17,8 +17,11 @@
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
             <div>
-                <a href="/">
-                    <x-application-logo class="h-14 w-auto" />
+                <a href="/" class="inline-flex items-center gap-2">
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 bg-white p-1 dark:border-gray-600 dark:bg-gray-800">
+                        <img src="{{ asset('img2/icon-head.png') }}" alt="" class="w-full h-full object-contain" />
+                    </span>
+                    <span class="text-xl font-bold tracking-widest uppercase text-gray-800 dark:text-gray-100">BRIXCAP</span>
                 </a>
             </div>
 

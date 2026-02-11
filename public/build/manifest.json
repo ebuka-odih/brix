@@ -4,7 +4,7 @@
     "name": "bootstrap"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DPSXFyFk.css",
+    "file": "assets/app-DSmkHXN-.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -18,7 +18,7 @@
     ]
   },
   "resources/js/frontpage.tsx": {
-    "file": "assets/frontpage-BZfYiG2L.js",
+    "file": "assets/frontpage-CyReMqHg.js",
     "name": "frontpage",
     "src": "resources/js/frontpage.tsx",
     "isEntry": true,
@@ -27,7 +27,7 @@
     ],
     "css": [
       "assets/frontpage-BcamT394.css",
-      "assets/app-DPSXFyFk.css"
+      "assets/app-DSmkHXN-.css"
     ]
   }
 }

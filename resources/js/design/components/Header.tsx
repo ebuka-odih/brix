@@ -31,8 +31,8 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href={appRoute('home', '/')} className="flex items-center space-x-3 cursor-pointer group">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-2xl shadow-blue-500/20 group-hover:scale-110 transition-transform">
-            <span className="text-white font-extrabold text-xl italic tracking-tighter">B</span>
+          <div className="w-10 h-10 rounded-full border border-white/10 bg-white/5 p-1.5 flex items-center justify-center shadow-2xl shadow-blue-500/10 group-hover:scale-105 transition-transform">
+            <img src="/img2/icon-head.png" alt="" className="w-full h-full object-contain" />
           </div>
           <span className="text-xl font-bold tracking-[0.2em] text-white uppercase">BRIXCAP</span>
         </a>
