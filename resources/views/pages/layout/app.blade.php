@@ -34,31 +34,95 @@
             left: 12px;
             top: 12px;
         }
+
+        .public-simple .site-header {
+            background: rgba(7, 18, 33, 0.94);
+            border-bottom: 1px solid rgba(157, 181, 212, 0.22);
+            backdrop-filter: blur(8px);
+        }
+
+        .public-simple .site-header.is-scrolled {
+            background: rgba(7, 18, 33, 0.98);
+            box-shadow: 0 8px 24px rgba(4, 12, 21, 0.45);
+        }
+
+        .public-simple .header-main {
+            min-height: 76px;
+        }
+
+        .public-simple .site-main {
+            padding-top: 96px;
+        }
+
+        .public-simple .header-main-inner {
+            gap: 16px;
+        }
+
+        .public-simple .brand-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            padding: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(157, 181, 212, 0.34);
+            box-shadow: none;
+            color: transparent;
+        }
+
+        .public-simple .brand-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .public-simple .brand-name {
+            font-size: 1.05rem;
+            text-shadow: none;
+        }
+
+        .public-simple .premium-nav {
+            justify-content: flex-start;
+            gap: 3px;
+            flex-wrap: wrap;
+        }
+
+        .public-simple .premium-nav > li > a {
+            text-transform: none;
+            letter-spacing: 0.01em;
+            font-size: 13px;
+            padding: 9px 12px;
+        }
+
+        .public-simple .premium-nav > li.is-active > a {
+            border: 1px solid rgba(102, 177, 255, 0.28);
+        }
+
+        .public-simple .btn {
+            text-transform: none;
+            letter-spacing: 0.01em;
+            font-size: 13px;
+            padding: 10px 16px;
+        }
+
+        @media (max-width: 991px) {
+            .public-simple .site-main {
+                padding-top: 82px;
+            }
+        }
     </style>
     @stack('styles')
 </head>
-<body class="premium-theme @yield('body_class')">
+<body class="premium-theme public-simple @yield('body_class')">
 @php
-    $supportEmail = env('MAIL_FROM_ADDRESS_2', env('MAIL_FROM_ADDRESS', 'support@brixcap.com'));
-    $isLanding = request()->routeIs('index');
-
-    $defaultNavItems = [
-        ['route' => 'index', 'label' => 'Home'],
+    $navItems = [
+        ['route' => 'index', 'label' => 'Frontpage'],
+        ['route' => 'market', 'label' => 'Markets'],
+        ['route' => 'trading', 'label' => 'Trading'],
+        ['route' => 'platform', 'label' => 'Platform'],
+        ['route' => 'news', 'label' => 'Insights'],
         ['route' => 'about', 'label' => 'About'],
         ['route' => 'account', 'label' => 'Accounts'],
-        ['route' => 'trading', 'label' => 'Trading'],
-        ['route' => 'market', 'label' => 'Markets'],
-        ['route' => 'platform', 'label' => 'Platform'],
         ['route' => 'contact', 'label' => 'Contact'],
-    ];
-
-    $landingNavItems = [
-        ['href' => '#capabilities', 'label' => 'Capabilities'],
-        ['href' => '#onboarding', 'label' => 'How It Works'],
-        ['href' => '#proof', 'label' => 'Platform Proof'],
-        ['href' => '#trust', 'label' => 'Trust'],
-        ['href' => '#markets', 'label' => 'Markets'],
-        ['href' => '#faq', 'label' => 'FAQ'],
     ];
 @endphp
 
@@ -66,27 +130,11 @@
 
 <div class="site-shell">
     <header class="site-header" id="site-header">
-        @if (!$isLanding)
-            <div class="header-utility">
-                <div class="container header-utility-inner">
-                    <p class="utility-email"><i class="fa fa-envelope"></i> {{ $supportEmail }}</p>
-                    <div class="utility-links">
-                        @auth
-                            <a href="{{ route('user.dashboard') }}">Dashboard</a>
-                        @else
-                            <a href="{{ route('login') }}">Log In</a>
-                            <a href="{{ route('register') }}">Register</a>
-                        @endauth
-                    </div>
-                </div>
-            </div>
-        @endif
-
         <div class="header-main">
             <div class="container header-main-inner">
-                <a class="brand" href="{{ route('index') }}">
+                <a class="brand" href="{{ route('index') }}" aria-label="BRIXCAP home">
                     <span class="brand-mark" aria-hidden="true">
-                        <iconify-icon icon="solar:chart-square-bold-duotone"></iconify-icon>
+                        <img src="{{ asset('img2/logo2.png') }}" alt="">
                     </span>
                     <span class="brand-name">BRIXCAP</span>
                 </a>
@@ -100,32 +148,22 @@
 
                 <nav id="public-nav" class="collapse navbar-collapse header-nav" aria-label="Public">
                     <ul class="nav navbar-nav premium-nav">
-                        @if ($isLanding)
-                            @foreach ($landingNavItems as $item)
-                                <li><a href="{{ $item['href'] }}">{{ $item['label'] }}</a></li>
-                            @endforeach
-                            @guest
-                                <li class="visible-xs-block"><a href="{{ route('register') }}">Open Account</a></li>
-                            @endguest
-                        @else
-                            @foreach ($defaultNavItems as $item)
-                                <li class="{{ request()->routeIs($item['route']) ? 'is-active' : '' }}">
-                                    <a href="{{ route($item['route']) }}" @if(request()->routeIs($item['route'])) aria-current="page" @endif>{{ $item['label'] }}</a>
-                                </li>
-                            @endforeach
-                        @endif
+                        @foreach ($navItems as $item)
+                            <li class="{{ request()->routeIs($item['route']) ? 'is-active' : '' }}">
+                                <a href="{{ route($item['route']) }}" @if(request()->routeIs($item['route'])) aria-current="page" @endif>{{ $item['label'] }}</a>
+                            </li>
+                        @endforeach
+                        @guest
+                            <li class="visible-xs-block"><a href="{{ route('consultant') }}">Advisor Desk</a></li>
+                            <li class="visible-xs-block"><a href="{{ route('register') }}">Open Account</a></li>
+                        @endguest
                     </ul>
                 </nav>
 
                 <div class="header-actions hidden-xs">
                     @guest
-                        @if ($isLanding)
-                            <a class="btn btn-ghost" href="{{ route('consultant') }}">Contact Advisor</a>
-                            <a class="btn btn-primary" href="{{ route('register') }}">Open Account</a>
-                        @else
-                            <a class="btn btn-ghost" href="{{ route('login') }}">Log In</a>
-                            <a class="btn btn-primary" href="{{ route('register') }}">Open Account</a>
-                        @endif
+                        <a class="btn btn-ghost" href="{{ route('consultant') }}">Advisor Desk</a>
+                        <a class="btn btn-primary" href="{{ route('register') }}">Open Account</a>
                     @else
                         <a class="btn btn-primary" href="{{ route('user.dashboard') }}">Open Dashboard</a>
                     @endguest
@@ -143,7 +181,6 @@
 
 <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('assets/js/lib/iconify-icon.min.js') }}"></script>
 <script>
     (function () {
         var header = document.getElementById('site-header');

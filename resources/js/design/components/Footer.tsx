@@ -1,5 +1,4 @@
 import React from 'react';
-import { Twitter, Linkedin, Github, Globe } from 'lucide-react';
 import { appRoute } from '../routes';
 
 const Footer: React.FC = () => {
@@ -18,13 +17,6 @@ const Footer: React.FC = () => {
               Multi-asset trading platform for serious retail traders and small professional teams.
               Account onboarding, execution, funding, and portfolio tools are managed in one workspace.
             </p>
-            <div className="flex space-x-5">
-              {[Twitter, Linkedin, Github, Globe].map((Icon, i) => (
-                <a key={i} href={appRoute('contact', '/contact-us')} className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all border border-white/5">
-                  <Icon size={18} />
-                </a>
-              ))}
-            </div>
           </div>
 
           <div className="space-y-6">

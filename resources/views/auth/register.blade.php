@@ -10,7 +10,7 @@
     <meta name="description" content="{{ env("APP_NAME")}} is a leading trading firm offering expert financial services, including forex, stocks, commodities, and crypto trading. Join us for market insights and profitable investment strategies."/>
 
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="shortcut icon" href="{{ asset('img2/logo2.png') }}">
     <!-- Page Title  -->
     <title>Register | {{ env('APP_NAME') }}</title>
     <!-- StyleSheets  -->
@@ -29,7 +29,7 @@
                     <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
                         <div class="brand-logo pb-4 text-center">
                             <a href="{{ route('index') }}" class="logo-link">
-                                <img src="{{ asset('img2/logo2.png') }}" style="width:200px; height: 60px" alt=""/>
+                                <img src="{{ asset('img2/logo2.png') }}" style="width:200px; height: 60px" alt="BRIXCAP"/>
                             </a>
                         </div>
                         <div class="card card-bordered">
