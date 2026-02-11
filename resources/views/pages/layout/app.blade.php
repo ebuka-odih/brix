@@ -21,7 +21,7 @@
 </head>
 <body class="premium-theme">
 @php
-    $supportEmail = env('MAIL_FROM_ADDRESS_2', env('MAIL_FROM_ADDRESS', 'support@brixfin.com'));
+    $supportEmail = env('MAIL_FROM_ADDRESS_2', env('MAIL_FROM_ADDRESS', 'support@brixcap.com'));
     $navItems = [
         ['route' => 'index', 'label' => 'Home'],
         ['route' => 'about', 'label' => 'About'],

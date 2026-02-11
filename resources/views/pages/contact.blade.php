@@ -1,7 +1,7 @@
 @extends('pages.layout.app')
 @section('content')
 @php
-    $supportEmail = env('MAIL_FROM_ADDRESS_2', env('MAIL_FROM_ADDRESS', 'support@brixfin.com'));
+    $supportEmail = env('MAIL_FROM_ADDRESS_2', env('MAIL_FROM_ADDRESS', 'support@brixcap.com'));
 @endphp
 
 @include('pages.layout.page-header', [

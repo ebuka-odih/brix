@@ -991,6 +991,10 @@ h6 {
         row-gap: 10px;
     }
 
+    .premium-toggle {
+        margin-left: auto;
+    }
+
     .header-nav {
         flex-basis: 100%;
         border-top: 1px solid rgba(158, 182, 213, 0.2);
@@ -1064,6 +1068,14 @@ h6 {
         min-height: 72px;
     }
 
+    .header-main-inner {
+        gap: 12px;
+    }
+
+    .premium-toggle {
+        margin-right: -4px;
+    }
+
     .brand-mark {
         width: 32px;
         height: 32px;
@@ -1091,15 +1103,22 @@ h6 {
     }
 
     .hero-banner {
-        min-height: 420px;
+        min-height: 0;
+        padding: 14px;
     }
 
     .hero-banner-content {
-        width: calc(100% - 28px);
-        left: 14px;
-        right: 14px;
-        bottom: 14px;
+        position: relative;
+        width: 100%;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
         padding: 18px;
+    }
+
+    .hero-banner img {
+        object-position: 60% center;
     }
 
     .hero-metrics {
