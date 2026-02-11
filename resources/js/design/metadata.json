@@ -1,0 +1,7 @@
+{
+  "name": "BRIXCAP - Multi-Asset Trading Platform",
+  "description": "A high-performance, institutional-grade trading platform for serious retail and professional traders, featuring multi-asset execution, automated bots, and comprehensive risk controls.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

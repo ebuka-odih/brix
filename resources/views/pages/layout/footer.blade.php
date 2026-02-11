@@ -1,52 +1,44 @@
-@php
-    $supportEmail = env('MAIL_FROM_ADDRESS_2', env('MAIL_FROM_ADDRESS', 'support@brixcap.com'));
-@endphp
-
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
     <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="{{ route('index') }}" class="footer-logo">
-                    <img src="{{ asset('img2/logo2.png') }}" alt="{{ env('APP_NAME') }} logo">
+        <div class="footer-grid bc-footer-grid">
+            <div class="footer-brand bc-footer-brand">
+                <a href="{{ route('index') }}" class="footer-logo" aria-label="BRIXCAP home">
+                    <img src="{{ asset('img2/logo2.png') }}" alt="BRIXCAP logo">
                 </a>
-                <p>
-                    {{ env('APP_NAME') }} delivers multi-asset trading infrastructure, research-led decision support,
-                    and secure execution for modern investors.
-                </p>
+                <p>BRIXCAP is a multi-asset trading platform for account onboarding, execution, and portfolio operations.</p>
+            </div>
+
+            <div>
+                <h4>Platform</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ route('platform') }}">Platform Overview</a></li>
+                    <li><a href="{{ route('trading') }}">Trading</a></li>
+                    <li><a href="{{ route('market') }}">Markets</a></li>
+                </ul>
             </div>
 
             <div>
                 <h4>Company</h4>
                 <ul class="footer-links">
-                    <li><a href="{{ route('about') }}">About Us</a></li>
-                    <li><a href="{{ route('account') }}">Accounts</a></li>
-                    <li><a href="{{ route('platform') }}">Platform</a></li>
-                    <li><a href="{{ route('consultant') }}">Consultancy</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4>Markets</h4>
-                <ul class="footer-links">
-                    <li><a href="{{ route('market') }}">Market Overview</a></li>
-                    <li><a href="{{ route('trading') }}">Trading Principles</a></li>
-                    <li><a href="{{ route('news') }}">Trading Insights</a></li>
+                    <li><a href="{{ route('about') }}">About</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
+                    <li><a href="{{ route('consultant') }}">Advisor Desk</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4>Start Here</h4>
+                <h4>Account</h4>
                 <ul class="footer-links">
-                    <li><a href="{{ route('register') }}">Open an Account</a></li>
+                    <li><a href="{{ route('register') }}">Open Account</a></li>
                     <li><a href="{{ route('login') }}">Client Login</a></li>
-                    <li><a href="mailto:{{ $supportEmail }}">{{ $supportEmail }}</a></li>
+                    <li><a href="{{ route('account') }}">Account Types</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2015 - {{ date('Y') }} {{ env('APP_NAME') }}. All rights reserved.</p>
+        <div class="footer-bottom bc-footer-bottom">
+            <p>&copy; {{ date('Y') }} BRIXCAP. All rights reserved.</p>
+            <p class="bc-footer-note">Trading involves risk. Product availability and service scope can vary by jurisdiction.</p>
         </div>
     </div>
 </footer>

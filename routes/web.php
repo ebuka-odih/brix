@@ -19,7 +19,8 @@ use App\Http\Controllers\WalletConnectController;
 use App\Http\Controllers\WithdrawalController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'pages.index')->name('index');
+Route::view('/', 'pages.frontpage')->name('index');
+Route::view('/legacy-home', 'pages.index')->name('legacy-home');
 Route::view('/about', 'pages.about')->name('about');
 Route::view('/account', 'pages.account')->name('account');
 Route::view('/trading', 'pages.trading')->name('trading');
