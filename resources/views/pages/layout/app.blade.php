@@ -104,6 +104,20 @@
             padding: 10px 16px;
         }
 
+        .public-simple .btn.btn-primary,
+        .public-simple .btn.btn-primary:focus {
+            color: #ffffff;
+            background: linear-gradient(180deg, #1264eb 0%, #0d53c5 100%);
+            border-color: #0d53c5;
+            box-shadow: none;
+        }
+
+        .public-simple .btn.btn-primary:hover {
+            color: #ffffff;
+            background: linear-gradient(180deg, #0f5cda 0%, #0a47af 100%);
+            border-color: #0a47af;
+        }
+
         @media (max-width: 991px) {
             .public-simple .site-main {
                 padding-top: 82px;
@@ -115,7 +129,7 @@
 <body class="premium-theme public-simple @yield('body_class')">
 @php
     $navItems = [
-        ['route' => 'index', 'label' => 'Frontpage'],
+        ['route' => 'index', 'label' => 'Explore'],
         ['route' => 'market', 'label' => 'Markets'],
         ['route' => 'trading', 'label' => 'Trading'],
         ['route' => 'platform', 'label' => 'Platform'],
