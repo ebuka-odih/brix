@@ -9,8 +9,8 @@
     <meta name="robots" content="index, follow">
     <meta name="description" content="BRIXCAP is a multi-asset trading platform with onboarding, KYC, funding, live execution, signals, bot strategies, copy trading, exchange, swap, and staking.">
 
-    <link rel="icon" href="{{ asset('img2/logo2.png') }}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{ asset('img2/logo2.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('img2/icon-head.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('img2/icon-head.png') }}" type="image/x-icon">
 
     <title>BRIXCAP | Multi-Asset Trading Platform</title>
 
@@ -148,7 +148,7 @@
             <div class="container header-main-inner">
                 <a class="brand" href="{{ route('index') }}" aria-label="BRIXCAP home">
                     <span class="brand-mark" aria-hidden="true">
-                        <img src="{{ asset('img2/logo2.png') }}" alt="">
+                        <img src="{{ asset('img2/icon-head.png') }}" alt="">
                     </span>
                     <span class="brand-name">BRIXCAP</span>
                 </a>

@@ -241,7 +241,7 @@
             </article>
           <a href="#" class="btn btn-sm btn-success d-lg-none d-flex" id="tradeBtn">Trade</a>
 
-          @include('dashboard.trade.panel')
+
 
             <!-- Bootstrap and jQuery Scripts -->
 
@@ -250,7 +250,7 @@
           <button class="d-flex justify-content-center align-items-center rounded-circle" type="button" data-bs-toggle="dropdown">
             <img src="{{ asset('/img/avatar.png') }}" alt="image" class="w-40-px h-40-px object-fit-cover rounded-circle">
           </button>
-          <div class="dropdown-menu to-top dropdown-menu-sm">
+          <div class="dropdown-menu dropdown-menu-sm">
             <div class="py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2">
               <div>
                 <h6 class="text-lg text-primary-light fw-semibold mb-2">{{ auth()->user()->name }}</h6>
@@ -311,9 +311,9 @@
 </footer>
 </main>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@include('dashboard.trade.panel')
 
-
+  <script src="{{ asset('assets/js/lib/jquery-3.7.1.min.js') }}"></script>
 
 <script>
         $(document).ready(function() {
@@ -418,7 +418,7 @@
 
 
   <!-- jQuery library js -->
-  <script src="{{ asset('assets/js/lib/jquery-3.7.1.min.js') }}"></script>
+ 
   <!-- Bootstrap js -->
   <script src="{{ asset('assets/js/lib/bootstrap.bundle.min.js') }}"></script>
   <!-- Apex Chart js -->

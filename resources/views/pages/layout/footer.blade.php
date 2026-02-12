@@ -3,7 +3,9 @@
         <div class="footer-grid bc-footer-grid">
             <div class="footer-brand bc-footer-brand">
                 <a href="{{ route('index') }}" class="footer-logo" aria-label="BRIXCAP home">
-                    <span class="footer-logo-mark" aria-hidden="true">B</span>
+                    <span class="footer-logo-icon" aria-hidden="true">
+                        <img src="{{ asset('img2/logo2.png') }}" alt="">
+                    </span>
                     <span class="footer-logo-text">BRIXCAP</span>
                 </a>
                 <p>BRIXCAP is a multi-asset trading platform for account onboarding, execution, and portfolio operations.</p>
