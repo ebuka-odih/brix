@@ -126,9 +126,9 @@
   <div>
     <a href="{{ route('index') }}" class="sidebar-logo">
         <span class="sidebar-brand-mark" aria-hidden="true">
-            <iconify-icon icon="solar:chart-square-bold-duotone"></iconify-icon>
+            <img src="{{ asset('img2/icon-head.png') }}" alt="" style="width: 100%; height: 100%; object-fit: contain;">
         </span>
-        <span class="sidebar-brand-name">Brixcap</span>
+        <span class="sidebar-brand-name">BRIXCAP</span>
     </a>
   </div>
   <div class="sidebar-menu-area">

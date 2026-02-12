@@ -4,7 +4,7 @@
             <div class="footer-brand bc-footer-brand">
                 <a href="{{ route('index') }}" class="footer-logo" aria-label="BRIXCAP home">
                     <span class="footer-logo-icon" aria-hidden="true">
-                        <img src="{{ asset('img2/logo2.png') }}" alt="">
+                        <img src="{{ asset('img2/icon-head.png') }}" alt="">
                     </span>
                     <span class="footer-logo-text">BRIXCAP</span>
                 </a>
