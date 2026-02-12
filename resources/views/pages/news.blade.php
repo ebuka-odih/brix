@@ -33,7 +33,7 @@
             </article>
 
             <article class="news-card reveal-up delay-2">
-                <div class="news-media"><iframe src="https://www.youtube.com/embed/hv5ITjaWGhM" title="GBP/USD and AUD/JPY" allowfullscreen></iframe></div>
+                <div class="news-media"><img src="{{ asset('news.jpg') }}" alt="Market Analysis"></div>
                 <div class="news-body">
                     <h3>GBP/USD, AUD/JPY & More: Charts for Next Week</h3>
                     <p>
