@@ -72,7 +72,7 @@
 
                                         <div class="buysell-field form-action mt-4">
 
-                                            <a class="btn btn-block btn-primary mt-3" data-bs-toggle="modal" href="#buy-coin">Confirm Payment</a>
+                                            <a class="btn btn-block btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#buy-coin" href="javascript:void(0)">Confirm Payment</a>
                                         </div><!-- .buysell-field -->
 
                                     </div>
@@ -136,5 +136,13 @@
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
  <script>
      new ClipboardJS('.btn');
+
+     // Move modal to body to avoid z-index/overflow issues
+     document.addEventListener('DOMContentLoaded', function() {
+         var myModalEl = document.getElementById('buy-coin');
+         if (myModalEl) {
+             document.body.appendChild(myModalEl);
+         }
+     });
  </script>
 @endsection
